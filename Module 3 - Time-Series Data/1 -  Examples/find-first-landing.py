@@ -30,7 +30,7 @@ def main(full_path_to_file):
     # load the data from the file
     data = np.loadtxt(full_path_to_file, delimiter=",")
 
-    # select the 8th column as the force plate data
+    # select the 9th column as the force plate data
     force_plate = data[:, 8]
 
     # save the sampling rate for this data (samples/second)

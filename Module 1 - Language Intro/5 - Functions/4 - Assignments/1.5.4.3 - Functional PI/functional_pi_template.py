@@ -10,9 +10,25 @@ def my_pi(target_error):
     """
 
     ### YOUR CODE HERE ###
+    a = 1
+    b = 1 / math.sqrt(2)
+    t = 1 / 4
+    p = 1
+    
+    for i in range(1, 10):
+        a_n = (a + b) / 2
+        b_n = math.sqrt(a * b)
+        t_n = t - p * (a_n - a) ** 2
+        p_n = 2 * p
+        a = a_n
+        b = b_n
+        p = p_n
+        t = t_n
+        p = p_n
 
+    targeterror = ((a + b) ** 2) / (4 * t)
     # change this so an actual value is returned
-    return 0
+    return targeterror
 
 
 
@@ -24,7 +40,7 @@ approximation = my_pi(desired_error)
 print("Solution returned PI=", approximation)
 
 error = abs(math.pi - approximation)
-
+print("Error is", error)
 if error < abs(desired_error):
     print("Solution is acceptable")
 else:

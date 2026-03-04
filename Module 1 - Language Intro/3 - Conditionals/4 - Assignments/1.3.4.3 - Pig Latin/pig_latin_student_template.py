@@ -36,19 +36,21 @@ for word in words:
     # word is too short. Do nothing.
     if len(word) < 3:
         # place the word in the pig_latin list
-        ### your code here ###
+        pig_latin.append(word)
         continue
 
     # starts with vowel, modify accordingly and put in list
     elif starts_with_vowel(word) == True:
         # modify the word and place in pig_latin list
-        ### your code here ###
+        #Add way to the end of the word
+        pig_latin.append(word + "vay")
         continue
 
     # starts with consonant, modify accordingly  and put in list
     else:
         # modify word and place in pig_latin list
-        ### your code here ###
+        # move first letter to end and add "ay"
+        pig_latin.append(word[1:] + word[0] + "ay")
         continue
 
 # a new sentence in which you will re-assemble each of the modified words

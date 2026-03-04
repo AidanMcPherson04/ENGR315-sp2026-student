@@ -2,7 +2,6 @@ import numpy as np
 
 # make a basic array
 arr2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-
 # what's the array shape
 shape = arr2d.shape
 

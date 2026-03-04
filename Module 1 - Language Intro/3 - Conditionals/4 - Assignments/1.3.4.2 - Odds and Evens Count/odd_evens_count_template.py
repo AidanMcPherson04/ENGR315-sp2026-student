@@ -29,3 +29,13 @@ num_evens = 0
 num_odds = 0
 
 ### YOUR CODE BEGINS HERE ###
+# loop through the list of numbers and determine if each number is odd or even
+for num in nums:
+    if num % 2 == 0:
+        num_evens += 1
+    else:
+        num_odds += 1
+
+# print the results
+print("Number of evens: ", num_evens)
+print("Number of odds: ", num_odds)
